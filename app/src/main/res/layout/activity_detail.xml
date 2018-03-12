@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch"
+    android:background="@color/soft"
+    tools:context="com.example.user.movieone.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/WMatchHWrap"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/details_text_content"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/movie_poster_details_view"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="@dimen/two_hundred_dp"
+                android:layout_margin="@dimen/five_dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                tools:src="@drawable/ic_launcher_background" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            style="@style/TextStyleTitles"
+            android:text="@string/overview_title"
+            android:layout_margin="@dimen/text_margins"/>
+
+        <TextView
+            android:id="@+id/overview_tv"
+            style="@style/TextStyle"
+            android:layout_margin="@dimen/text_margins"
+            android:gravity="fill_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/movie_poster_details_view"
+            app:layout_constraintTop_toBottomOf="@+id/movie_poster_details_view"
+            tools:text="TextView" />
+
+    </LinearLayout>
+</ScrollView>

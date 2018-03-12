@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WMatchHWrap">
+
+    <ImageView
+        android:id="@+id/movie_image_List"
+        style="@style/MatchMatch"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/rating_value_tv"
+        style="@style/TextStyle"
+        android:layout_gravity="end"
+        android:background="@drawable/cyrcle"
+        android:gravity="center" />
+</FrameLayout>
