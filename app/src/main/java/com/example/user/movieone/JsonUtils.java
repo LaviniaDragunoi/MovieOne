@@ -46,12 +46,11 @@ public class JsonUtils {
     private static final String BASE_URL
             = "https://api.themoviedb.org/3/movie";
     private static final String PARAM_KEY = "api_key";
-    private static final String API_KEY = "609f9fd659b2e51b4667367c2ca5c54a";
+    private static final String API_KEY = "your API key here";
     private OkHttpClient client;
 
 
 
-    /**
      * This method will create the URL that will be send in the makeHttpRequest method
      *
      * @param sortBy is the parameter that will be put from the preferences
