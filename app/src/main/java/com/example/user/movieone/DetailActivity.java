@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -37,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         MovieObject currentMovie = intent.getParcelableExtra("Movie");
 
         String moviePosterUrlString = MovieAdapter.buildPosterUrl(currentMovie.getMoviePoster());
-        Picasso.with(this).load(moviePosterUrlString).into(posterMovie);
+        Picasso.get().load(moviePosterUrlString).into(posterMovie);
         displayMovieUI(currentMovie);
 
         setTitle(currentMovie.getOriginalTitle());
@@ -63,5 +64,7 @@ public class DetailActivity extends AppCompatActivity {
 
         ratingBar = findViewById(R.id.rating_bar);
         ratingBar.setRating((float) movie.getRating());
+
+
     }
 }

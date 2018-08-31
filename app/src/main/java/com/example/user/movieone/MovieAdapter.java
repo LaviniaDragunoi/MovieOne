@@ -93,7 +93,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         final String ratingString = valueOf(movieItem.getRating());
 
 
-        Picasso.with(mContext).load(moviePosterUrlString).into(moviePosterImageView,
+        Picasso.get().load(moviePosterUrlString).into(moviePosterImageView,
                 new com.squareup.picasso.Callback() {
                     @Override
                     public void onSuccess() {
@@ -102,7 +102,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                     }
 
                     @Override
-                    public void onError() {
+                    public void onError(Exception e) {
                         errorLoadMessage.setVisibility(View.VISIBLE);
                     }
                 });

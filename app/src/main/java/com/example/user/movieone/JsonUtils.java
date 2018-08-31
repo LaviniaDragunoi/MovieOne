@@ -19,8 +19,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.OkHttpClient;
-
 import static java.lang.String.valueOf;
 
 /**
@@ -46,9 +44,7 @@ public class JsonUtils {
     private static final String BASE_URL
             = "https://api.themoviedb.org/3/movie";
     private static final String PARAM_KEY = "api_key";
-    private static final String API_KEY = "609f9fd659b2e51b4667367c2ca5c54a";
-    private OkHttpClient client;
-
+    private static final String API_KEY = "your API_KEY goes here";
 
 
     /**
